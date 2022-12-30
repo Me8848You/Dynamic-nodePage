@@ -1,0 +1,31 @@
+{
+  "name": "shopit",
+  "version": "1.0.0",
+  "description": "e-commerse web application using MERN",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon src/app.js -e js,hbs",
+    "dev": "set NODE_ENV=DEVELOPMENT& nodemon backend/server",
+    "prod": "set NODE_ENV=PRODUCTION& nodemon backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Me8848You/Shopit.git"
+  },
+  "author": "Suman Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Me8848You/Shopit/issues"
+  },
+  "homepage": "https://github.com/Me8848You/Shopit#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "mongodb": "^4.13.0",
+    "mongoose": "^6.8.1",
+    "nodemon": "^2.0.20",
+    "util": "^0.12.5"
+  }
+}
