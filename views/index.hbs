@@ -11,6 +11,18 @@
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
   <title>Dynamic Page with nodejs</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .background123{
+    background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0' gradientTransform='rotate(313,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%230FF'/%3E%3Cstop offset='1' stop-color='%23CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(208,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23F00'/%3E%3Cstop offset='1' stop-color='%23FC0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='7.589999999999999'%3E%3Cpath transform='translate(-159.95 13.600000000000001) rotate(2.3500000000000014 1409 581) scale(0.9427749999999999)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='2.53' transform='translate(-177.5 116) rotate(14.3 800 450) scale(1.01724)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(38.8 -163.5) rotate(122.5 401 736) scale(1.01724)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='2.3'%3E%3Cpath transform='translate(696 -5.399999999999999) rotate(1.3499999999999996 150 345) scale(0.962925)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='5.06' transform='translate(-238.5 -310.5) rotate(122.4 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='translate(-466.4 133.6) rotate(20.4 1400 132) scale(0.795)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+    }
+  </style>
 </head>
 
 <body>
@@ -18,9 +30,137 @@
 
   {{>slider SD=sliderDet}}
 
-  {{>card Card=card}}
+  {{!-- {{>card Card=card}} --}}
+
+{{!-- banner section start  --}}
+<div class="banner-section py-3 background123">
+  <div class="container">
+    <div class="row">
+      <div class="col md-12 text-center border-bottom p-3">
+        <h2 class="text">Learn Coding With Sumannn</h2>
+        <p class="text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ipsa similique mollitia consequatur provident, natus optio, est quia id corrupti doloremque eligendi iure hic recusandae reprehenderit sequi possimus quis praesentium!</p>
+        <div class="btn btn-outline-primary">Click Me</div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  {{!-- card section start  --}}
+  {{!-- Services section start from here --}}
+  <section class="section py-4 background123">
+    <h1 class="text-center text-secondary">Services We Provides are here </h1>
+    <hr>
+    <div class="container">
+      <p> {{card.icon}} </p>
+        
+      {{!-- {{#each card}} --}}
+      <div class="card p-2" style="width: 18rem; ">
+        <img src="/static/images/idea.jpg" class="card-img-top" style="height: 18rem;" alt="...">
+        <div class="card-body">
+          <h4 class="card-title">{{card.title}}</h4>
+          <hr class="text-danger">
+          <p class="card-text">{{card.description}}</p>
+          <a href="{{card.link}}" class="btn btn-outline-danger mr-4">{{card.linktext}}</a>
+          <a href="#" class="btn btn-outline-success ml-4">Find Us</a>
+        </div>
+      </div>
+  {{!-- {{/each}} --}}
+    </div>
+  </section>
+
+
+{{!-- Banner section no 2 --}}
+
+{{{banner.bnr}}}
+<h1>{{{this.title}}}  </h1>
+<section class="banner-section py3 background123">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 pt-5">
+        {{!-- left section  --}}
+
+      <h3 class="text">"This World Is Even More Beautiful When You Close Your EYES"-cutie</h3>
+      <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, mollitia laboriosam perspiciatis ratione placeat voluptate ab pariatur voluptatibus velit asperiores porro molestiae dicta distinctio magni quos tempora illo atque ut!</p>
+      <button class="btn btn-danger ">Click Here</button>
+      </div>
+      <div class="col-md-6 text-center">
+        {{!-- right section 
+         --}}
+         <img src="/static/images/cute.jpg" style="max-height: 400px; " alt="">
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{{!-- banner section arko part  --}}
+
+
+<section class="banner-section py3 background123">
+  <div class="container">
+    <div class="row">
+
+        <div class="col-md-6 pt-4 text-center">
+        {{!-- left section 
+         --}}
+         <img src="/static/images/couple.jpg" style="max-height: 400px; width:350px " alt="">
+
+      </div>
+
+
+
+      <div class="col-md-6 pt-5">
+        {{!-- Right section  --}}
+
+      <h3 class="text">"This World Is Even More Beautiful When You Close Your EYES"-cutie</h3>
+      <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, mollitia laboriosam perspiciatis ratione placeat voluptate ab pariatur voluptatibus velit asperiores porro molestiae dicta distinctio magni quos tempora illo atque ut!</p>
+      <button class="btn btn-danger ">Click Here</button>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
   
+{{!-- contact us section  --}}
+<hr style="color: black; height:4px;">
+<div class="container" style="background-color: rgb(218, 216, 216); border-radius:23px">
+
+<h2 class="text-center text-primary">Contact Us</h2>
+<form  class="m-4 p-4" method="post" action="contact-form">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="form-floating mb-3">
+  <textarea class="form-control" name="message" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 300px"></textarea>
+  <label for="floatingTextarea2"></label>
+</div>
+<div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
+</form>
+
+</div>
+
+
+{{!-- about section  --}}
+{{>about aaa=about}}
+
 
 
   <!-- Optional JavaScript; choose one of the two! -->
