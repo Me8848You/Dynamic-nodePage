@@ -47,42 +47,23 @@ background-size: cover;
   
 
   {{!-- card section start  --}}
-  {{!-- Services section start from here --}}
-  <section class="section py-4 background123">
-    <h1 class="text-center text-secondary">Services We Provides are here </h1>
-    <hr>
-    <div class="container">
-      <p> {{card.icon}} </p>
-        
-      {{!-- {{#each card}} --}}
-      <div class="card p-2" style="width: 18rem; ">
-        <img src="/static/images/idea.jpg" class="card-img-top" style="height: 18rem;" alt="...">
-        <div class="card-body">
-          <h4 class="card-title">{{card.title}}</h4>
-          <hr class="text-danger">
-          <p class="card-text">{{card.description}}</p>
-          <a href="{{card.link}}" class="btn btn-outline-danger mr-4">{{card.linktext}}</a>
-          <a href="#" class="btn btn-outline-success ml-4">Find Us</a>
-        </div>
-      </div>
-  {{!-- {{/each}} --}}
-    </div>
-  </section>
+ {{>card Card=card}}
 
 
 {{!-- Banner section no 2 --}}
 
-{{{banner.bnr}}}
-<h1>{{{this.title}}}  </h1>
+{{#each banner}}
+
+{{#each this.bnr}}
 <section class="banner-section py3 background123">
   <div class="container">
     <div class="row">
       <div class="col-md-6 pt-5">
         {{!-- left section  --}}
 
-      <h3 class="text">"This World Is Even More Beautiful When You Close Your EYES"-cutie</h3>
-      <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, mollitia laboriosam perspiciatis ratione placeat voluptate ab pariatur voluptatibus velit asperiores porro molestiae dicta distinctio magni quos tempora illo atque ut!</p>
-      <button class="btn btn-danger ">Click Here</button>
+      <h3 class="text">{{this.title}}</h3>
+      <p class="text">{{this.description}}</p>
+      <button class="btn btn-danger ">{{button}}</button>
       </div>
       <div class="col-md-6 text-center">
         {{!-- right section 
@@ -95,8 +76,7 @@ background-size: cover;
 </section>
 
 
-{{!-- banner section arko part  --}}
-
+{{!-- arko part lai yeha rakhe  --}}
 
 <section class="banner-section py3 background123">
   <div class="container">
@@ -122,6 +102,14 @@ background-size: cover;
     </div>
   </div>
 </section>
+
+
+{{/each}}
+{{/each}}
+
+{{!-- banner section arko part  --}}
+
+
 
 
 
@@ -160,8 +148,6 @@ background-size: cover;
 
 {{!-- about section  --}}
 {{>about aaa=about}}
-
-
 
   <!-- Optional JavaScript; choose one of the two! -->
 

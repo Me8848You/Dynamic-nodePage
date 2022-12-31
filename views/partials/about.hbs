@@ -1,8 +1,12 @@
 
+
+{{#each about}}
 <div class="aboutsetction my-4 mb-4">
     <div class="container">
-    <h2 class="text-center text-primary">{{aaa.title}}</h2>
-        <p class="text-center">{{aaa.description}}</p>
+    <h2 class="text-center text-primary">{{this.title}}  </h2>
+        <p class="text-center">{{this.description}}</p>
         <button class="btn btn-primary text-center" style="width: 100%;">Danger</button>
     </div>
 </div>
+
+{{/each}}

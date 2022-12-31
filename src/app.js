@@ -82,6 +82,7 @@ mongoose.connect("mongodb://localhost:27017/Nodedb", (err, succ) => {
 // });
 
 // card.create({
+//   cardName:"First",
 // arrCard:[
 //     {
 //       icon: "/static/images/icon.jpg",

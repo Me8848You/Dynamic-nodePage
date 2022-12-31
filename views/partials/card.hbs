@@ -1,0 +1,26 @@
+ {{!-- Services section start from here --}}
+<style>
+  .apple{
+    background-color: black;
+  }
+ </style>
+ {{#each Card}}
+    {{#each this.arrCard}}
+   
+  <section class="section py-4 apple background123 d-inline-flex m-2">
+
+    <div class="container">
+      <div class="card m-2" style="width: 17rem; ">
+        <img src="{{this.icon}}" class="card-img-top" style="height: 14rem;" alt="...">
+        <div class="card-body">
+          <h4 class="card-title">{{this.title}}</h4>
+          <hr class="text-danger">
+          <p class="card-text">{{this.description}}</p>
+          <a href="{{this.link}}" class="btn btn-outline-danger mr-4">{{this.linktext}}</a>
+          <a href="#" class="btn btn-outline-success ml-4">Find Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+    {{/each}}
+  {{/each}}

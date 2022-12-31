@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const card = mongoose.Schema({
+  cardName:String,
   arrCard: [
     {
       icon: String,
